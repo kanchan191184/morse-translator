@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morse Translator</title>
+    <script src="./script.js" type="module" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Morse code translator</h1>
+      <label for="inputTextAreaId">Enter Text Or Morse Code:</label>
+      <textarea
+        id="inputTextAreaId"
+        rows="4"
+        placeholder="Enter text"
+      ></textarea>
+      <button type="button" id="translate">Translate</button>
+      <label for="outputTextAreaId">Translation:</label>
+      <textarea
+        id="outputTextAreaId"
+        rows="4"
+        cols="4"
+        placeholder="Translation"
+      ></textarea>
+      <button type="button" id="reset">Reset</button>
+    </div>
+  </body>
+</html>
