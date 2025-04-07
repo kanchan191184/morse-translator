@@ -18,7 +18,7 @@
   margin: 20px;
 }
 .container h1 {
-  color: olivedrab;
+  color: #6b8e23;
 }
 .container label {
   font-size: 20px;
@@ -33,19 +33,19 @@
 .container button {
   font-size: 20px;
   padding: 5px;
-  background-color: olivedrab;
+  background-color: #6b8e23;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 .container button:hover {
-  background-color: darkolivegreen;
-  color: lightyellow;
+  background-color: #556b2f;
+  color: #ffffe0;
 }
 
 .error {
-  color: red;
+  color: #b82121;
   font-weight: bold;
 }
 

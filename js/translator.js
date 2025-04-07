@@ -36,25 +36,25 @@ const morseCode = {
   7: "--...",
   8: "---..",
   9: "----.",
-  // ".": ".-.-.-",
-  // ",": "--..--",
-  // "?": "..--..",
-  // "'": ".----.",
-  // "!": "-.-.--",
-  // "/": "-..-.",
-  // "(": "-.--.",
-  // ")": "-.--.-",
-  // "&": ".-...",
-  // ":": "---...",
-  // ";": "-.-.-.",
-  // "=": "-...-",
-  // "+": ".-.-.",
-  // "-": "-....-",
-  // _: "..--.-",
-  // '"': ".-..-.",
-  // $: "...-..-",
-  // "@": ".--.-.",
-  // " ": "/",
+  ".": ".-.-.-",
+  ",": "--..--",
+  "?": "..--..",
+  "'": ".----.",
+  "!": "-.-.--",
+  "/": "-..-.",
+  "(": "-.--.",
+  ")": "-.--.-",
+  "&": ".-...",
+  ":": "---...",
+  ";": "-.-.-.",
+  "=": "-...-",
+  "+": ".-.-.",
+  "-": "-....-",
+  _: "..--.-",
+  '"': ".-..-.",
+  $: "...-..-",
+  "@": ".--.-.",
+  " ": "/",
 };
 
 //Reverse the morseCode dictionary to get a lookup for Morse code to letters and numbers
@@ -69,9 +69,16 @@ for (const key in morseCode) {
 // translation from English to Morse code
 export const englishToMorse = (text) => {
   try {
+    console.log("Input:", text); // Debugging input
+    console.log("Morse Code Dictionary:", morseCode); // Debugging dictionary
+
     return text
+      .toUpperCase()
       .split("")
       .map((char) => {
+        if (char === " ") {
+          return "/"; // Represent spaces as '/'
+        }
         if (!morseCode[char]) {
           throw new Error(`Invalid character ${char} in input`);
         }
@@ -106,7 +113,9 @@ export const checkingInputType = (
   morseToEnglish,
   englishToMorse
 ) => {
-  if (inputText.includes(".") || inputText.includes("-")) {
+  const isMorseCode = /^[.\-/ ]+$/.test(inputText);
+
+  if (isMorseCode) {
     return morseToEnglish(inputText);
   } else {
     return englishToMorse(inputText);

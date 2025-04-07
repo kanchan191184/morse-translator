@@ -1,3 +1,5 @@
+@use "./scss/colors" as *;
+
 * {
   padding: 0;
   margin: 0;
@@ -19,7 +21,7 @@
   }
 
   h1 {
-    color: olivedrab;
+    color: $light-color;
   }
   label {
     font-size: 20px;
@@ -35,20 +37,20 @@
   button {
     font-size: 20px;
     padding: 5px;
-    background-color: olivedrab;
-    color: white;
+    background-color: $light-color;
+    color: $basic-white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 
     &:hover {
-      background-color: darkolivegreen;
-      color: lightyellow;
+      background-color: $dark-color;
+      color: $basic-light-yellow;
     }
   }
 }
 
 .error {
-  color: red;
+  color: $error-color;
   font-weight: bold;
 }

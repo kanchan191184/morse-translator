@@ -1,0 +1,24 @@
+{
+  "name": "morse-translator",
+  "version": "1.0.0",
+  "description": "This task will require you to create a web page Morse Code translator. The User Interface will have to look good but should remain simple (additional features, ie. sounds, lights, etc, should only be added once the MVP has been completed.)",
+  "homepage": "https://github.com/kanchan191184/morse-translator#readme",
+  "bugs": {
+    "url": "https://github.com/kanchan191184/morse-translator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanchan191184/morse-translator.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

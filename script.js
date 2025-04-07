@@ -1,29 +1,9 @@
 import {
   translateButton,
-  getInputFieldValue,
-  resetBothField,
-  updateOutputField,
+  resetHandler,
+  translationHandler,
   resetButton,
-} from "./dom.js";
-import {
-  englishToMorse,
-  morseToEnglish,
-  checkingInputType,
-} from "./translator.js";
+} from "./js/dom.js";
 
-//translation button event listener
-translateButton.addEventListener("click", () => {
-  const inputText = getInputFieldValue();
-  if (inputText === "") {
-    updateOutputField("Please provide some Input", true);
-    return;
-  }
-  const result = checkingInputType(inputText, morseToEnglish, englishToMorse);
-  const isError = result.startsWith("Error:");
-  updateOutputField(result, isError);
-});
-
-//reset button event listener
-resetButton.addEventListener("click", () => {
-  resetBothField();
-});
+translateButton.addEventListener("click", translationHandler);
+resetButton.addEventListener("click", resetHandler);
