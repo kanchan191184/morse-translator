@@ -52,4 +52,10 @@ describe("checking input type", () => {
       ".... . .-.. .-.. ---"
     );
   });
+
+  it("detects English input and calls englishToMorse", () => {
+    expect(checkingInputType("hi.", morseToEnglish, englishToMorse)).toBe(
+      ".... .. .-.-.-"
+    );
+  });
 });
