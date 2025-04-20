@@ -23,6 +23,20 @@
   h1 {
     color: $light-color;
   }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  // li {
+  //   padding: 0;
+  //   margin: 0;
+  //   text-align: left;
+  //   font-size: 20px;
+  // }
+
   label {
     font-size: 20px;
     text-align: left;
